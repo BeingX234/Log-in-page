@@ -1,0 +1,159 @@
+:root{
+    --black10: rgba(0, 0, 0, 1);
+    --black03: rgba(0, 0, 0, 0.4) ;
+    --black07: rgba(0, 0, 0, 0.7) ;
+    --white03: rgba(255, 255, 255, 0.3);
+    --white10: rgba(255, 255, 255, 1);
+    --white07: rgba(255, 255, 255, 1);
+}
+
+body,html{
+    height: 100%;
+    margin: 0;
+}
+
+.container{
+    font-family: 'IBM Plex Mono', monospace;
+    background-image: url('/img/space3.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.login{
+    margin: 8px auto;
+    color: white;
+}
+
+.card{
+    max-width: 280px;
+    width: 40%;
+    /* max-height: 400px; */
+    min-width: 150px;
+    margin:0px auto;
+    padding: 2rem;
+    border: 2px solid white;
+    box-shadow: 0 0 5px 2px white;
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--white03);
+}
+
+.avatar{
+    width: 5rem;
+    margin: auto;
+    color: white;
+    /* padding: 2px; */
+    border: 3px solid hsl(0, 0%, 100%);
+    box-shadow: 0 0 10px 2px white;
+    border-radius: 50%;
+}
+
+.element{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    color: white;
+}
+
+input[type=text],
+input[type=password]{
+    color: white;
+    margin: 0.5rem 0rem;
+    height: 2.5rem;
+    width: 90%;
+    border-radius: 8px;
+    border: 1px solid white;
+    padding: 4px 10px;
+    font-family: "IBM Plex Mono", monospace;
+    /* font-family: "FontAwesome"; */
+    transition: 0.8s;
+    background-color: var(--black03);
+}
+
+
+input[type=text]:hover,
+input[type=text]:focus,
+input[type=password]:hover,
+input[type=password]:focus,
+input[type=submit]:hover{
+    box-shadow: 0px 0px 10px  white;
+}
+
+input[type=submit]{
+    margin: 1.5rem auto 0px;
+    height: 2.5rem;
+    width: 70%;
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: var(--white07);
+    font-weight: 700;
+    color: var(--black07);
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.element span{
+    position: absolute;
+    top: 1.5rem;
+    left: 10px;
+    font-size: 12px;
+    transition: 0.8s;
+    user-select: none;
+    pointer-events: none;
+}
+
+.element input:focus ~ span,
+.element input:valid ~ span{
+    top:0px;
+    left: 5px;
+    background-color: var(--white10);
+    padding: 0px 2px;
+    color: var(--black10);
+    border-radius: 3px;
+    box-shadow: 0 0 8px 1px white;
+}
+
+.element p{
+    font-size: 13px;
+}
+
+.remember-area{
+    color: white;
+    font-weight: 100;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.remember-area input{
+    accent-color: white;
+}
+
+.element a{
+    color: var(--white10);
+    font-weight:900;
+    text-decoration: none;
+}
+
+.sign-up{
+    /* position:absolute; */
+    /* top: auto;
+    left: auto; */
+    /* margin-right: -50%; */
+    display: none;
+}
+
+/* .sign-in{
+    display: none;
+} */
+
+
